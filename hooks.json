@@ -1,0 +1,48 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^(Bash|Shell|shell_command)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -Command \"Write-Host '[codex hook] Checking shell command'\"",
+            "statusMessage": "Checking shell command"
+          }
+        ]
+      },
+      {
+        "matcher": "^(Edit|Write|apply_patch)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -Command \"Write-Host '[codex hook] Checking file edit'\"",
+            "statusMessage": "Checking file edit"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "^(Bash|Shell|shell_command)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -Command \"Write-Host '[codex hook] Shell command finished'\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -Command \"npm --prefix .\\\\jeonju_front run lint; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; npm --prefix .\\\\jeonju_front run build; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; npm --prefix .\\\\jeonju_front run test\"",
+            "timeout": 600
+          }
+        ]
+      }
+    ]
+  }
+}
