@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grid Object Multiline Formatter"
+  short_description: "Expand searchlist and colModel objects cleanly"
+  default_prompt: "Use $format-grid-object-properties to expand one-line searchlist or colModel objects into readable multi-line properties."

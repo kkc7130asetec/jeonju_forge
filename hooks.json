@@ -20,6 +20,15 @@
             "statusMessage": "Checking file edit"
           }
         ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:\\Users\\asete\\.local\\bin\\graphify.EXE hook-check"
+          }
+        ]
       }
     ],
     "PostToolUse": [
