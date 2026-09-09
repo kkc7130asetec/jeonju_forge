@@ -1,4 +1,0 @@
-interface:
-  display_name: "Frontend Test Writer"
-  short_description: "Draft frontend test plans from specs and TEST_RULE"
-  default_prompt: "Use $frontend-test-writer to create or revise a frontend test plan document from requirements, page specs, component specs, TEST_RULE, the test plan template, and the linter rules."
