@@ -1,0 +1,4 @@
+interface:
+  display_name: "동작 보존형 리팩터링"
+  short_description: "기존 계약을 보존하며 책임과 응집도를 개선"
+  default_prompt: "$refactor-code를 사용해 외부 동작과 기존 public API를 보존하면서 책임 경계와 함수 의도를 개선해줘."
